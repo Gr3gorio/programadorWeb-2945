@@ -1,6 +1,6 @@
 var diasDeSemana = ['Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes','Sabado','Domingo']
 
-
+var 
  for (var i=0; i < diasDeSemana.length; i++){
      
     switch(diasDeSemana[i]){
@@ -14,7 +14,6 @@ var diasDeSemana = ['Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes','Sabado'
         case('Miercoles'):
         console.log ('Miercoles dia de semana')
         break
-
         case('Jueves'):
         console.log ('Jueves dia de semana')
         break
