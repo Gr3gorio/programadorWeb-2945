@@ -156,14 +156,16 @@
 var students = [
   { name: 'Ana' },
   { name: 'Pedro', age: 32 },
+  { name: 'Pedro', age: 33 },
   { name: 'Juan', age: 22 }
 ]
+var age = prompt('ingrese edad')
 
 for (var i = 0; i < students.length; i++) {
   var student = students[i]
-  if (!student.age) {
-    continue
+  if (student.age>=age) {
+    console.log(students[i])
   }
 
-  console.log('Tu edad es', student.age)
+
 }

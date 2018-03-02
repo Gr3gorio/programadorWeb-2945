@@ -1,18 +1,39 @@
-var alumnos =[
-    {firstName = 'juan', lastName = 'perez',nota = '8'},
-    {firstName = 'maria', lastName = 'rodriguez',nota = '5'},
-    {firstName = 'daniela', lastName = 'medina',nota = '10'},
+
+// primera funcion buscar por nota
+
+var students =[
+    {firstName : 'juan', lastName : 'perez',note : 8},
+    {firstName : 'maria', lastName : 'rodriguez',note : 5},
+    {firstName : 'daniela', lastName : 'medina',note : 10}
 ]
+var note = prompt ('ingrese la nota')
 
-var notaSolicitada = prompt ('ingrese la nota')
-
-function promedio (){
-for(i=0 ; i<alumnos.length; i++){
-    var alumnos = alumnos[i]
-    if (nota >= notaSolicitada){
-        console.log('los alumnos con notas mayor o igual a la solicitada son : '+alumnos[i])
+function promedio (note){
+for(var i=0 ; i<students.length; i++){
+    var student = students[i]
+    if ( student.note >=note ){
+        console.log('estudiante con nota mayor o igual al indicado',students[i])
     }
 }
 }
+promedio(note)
 
-promedio()
+//segunda funcion buscar por nombre o apellido
+
+var students =[
+    {firstName : 'juan', lastName : 'perez',note : 8},
+    {firstName : 'maria', lastName : 'rodriguez',note : 5},
+    {firstName : 'daniela', lastName : 'medina',note : 10}
+]
+var nombreApellido = prompt ('ingrese el nombre o apellido ')
+
+function buscarAlumno(nombreApellido){
+    for(var i=0;i<students.length;i++)
+    var student=students[i]
+    if(student.firstName===nombreApellido || student.lastName===nombreApellido){
+        console.log('los datos del estudiante son : ',students[i])
+    }
+}
+
+buscarAlumno(nombreApellido)
+
