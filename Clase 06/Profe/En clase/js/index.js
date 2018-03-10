@@ -138,6 +138,10 @@
 
 // console.log('Names push', names)
 
+<<<<<<< HEAD
+=======
+// Pendientes
+>>>>>>> 9a71bfadf0e62acb611265f53726a8bbeb7a9bcc
 // - Sort
 // - Reverse
 // - Pop
