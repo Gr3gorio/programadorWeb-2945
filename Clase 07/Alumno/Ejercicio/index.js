@@ -1,4 +1,4 @@
-var studentsList = ['CARLOS','GERONIMO','NICOLAS','LUCAS','MARIA','FEDERICO','ANTONIO','LORNA','JULIAN','DIEGO','DANIELA','JUAN','MATEO','BARBARA','AGUSTIN','MARIO','MARIEL','ANA','FLORENCIA']
+var studentsList = ['CARLOS','GERONIMO','NICOLAS','LUCAS']
 
 var stringStudents = JSON.stringify(studentsList)
 
@@ -8,18 +8,28 @@ var localStudents = localStorage.getItem('students')
 
 var parsedStudnets = JSON.parse(localStudents)
 
-//var studentName = 'Gregorio'
+
 
 function addStudent (studentName) {
-var studentUpperCase = studentNameToUpperCase(studentName)
+var localStudents = localStorage.getItem('studentsList')
 
-var NewStudenList= studentsList.push(studentUpperCase)
-  
+var parsedStudentsList
+
+if (localStudents){
+    parsedStudentsList = JSON.parse(localStudents)
+}else{
+    parsedStudentsList=[]
+}
+  var upperCaseName = studentName.toUpperCase()
+
+  parsedStudentsList.push(upperCaseName)
+  var NewList = JSON.stringify(parsedStudnets)
+  localStorage.setItem('students', NewList)
 }
 
-var NewStringStudents = JSON.stringify(NewstudentsList)
+addStudent('gregorio')
 
-localStorage.setItem('NewStudents', NewStringStudents)
+
 
 
 
