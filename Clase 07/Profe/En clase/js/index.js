@@ -71,7 +71,7 @@
 
 // Mostrar lo del localStorage
 
-var localMovies = localStorage.getItem('movies')
+/*var localMovies = localStorage.getItem('movies')
 
 var parsedMovies
 
@@ -88,4 +88,6 @@ if (parsedMovies && Array.isArray(parsedMovies)) {
   for (var i = 0; i < parsedMovies.length; i++) {
     console.log(parsedMovies[i])
   }
-}
+}*/
+
+

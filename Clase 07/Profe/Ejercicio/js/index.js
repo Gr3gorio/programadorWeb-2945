@@ -51,7 +51,7 @@ function addStudent (name) {
   localStorage.setItem('studentList', strStudentList)
 }
 
-addStudent('Pato')
+addStudent('pato')
 // addStudent('Pato')
 // addStudent('Pato')
 // addStudent('Ñato')
