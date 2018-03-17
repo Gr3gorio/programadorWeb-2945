@@ -44,4 +44,8 @@
    - `push`
    - `join`
    - `splice`
+<<<<<<< HEAD
 >>>>>>> 81606db81e3ba4f2e2759d9b18f5d96c63c34b66
+=======
+   - `sort`
+>>>>>>> edcd2a90b97e4c1ee90036c1c340ea61b5711e47
