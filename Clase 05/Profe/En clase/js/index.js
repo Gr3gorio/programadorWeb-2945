@@ -86,10 +86,10 @@
 function Student (firstName, lastName, age) {
   // this.fullName = firstName + ' ' + lastName
   var id = Math.random()
-  var modified = false
-
   this.getId = function () {
     return id
+
+    var modified = false
   }
 
   this.getFirstName = function () {
