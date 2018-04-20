@@ -1,4 +1,4 @@
-// Traer elemento HTML a JS
+// Traeer elmento HTML a JS
 
 // var rootContainer = document.getElementById('root')
 
