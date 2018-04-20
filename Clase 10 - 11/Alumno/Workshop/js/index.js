@@ -27,7 +27,7 @@ function showStudents (studentsList) {
   }
 }*/
 
-function addItem () {
+/*function addItem () {
   var ul = document.getElementById('mainList')
 
   var nombre = document.getElementById('firstName')
@@ -82,5 +82,81 @@ function deleteStudent (student) {
     var stringList = JSON.stringify(parsedList)
 
     localStorage.setItem('studentsList', stringList)
+  }
+}
+*/
+
+function createStudent (student) {
+  var li = document.createElement('li')
+
+  li.className = 'list-group-item'
+
+  li.id = student.dni
+
+  li.innerHTML =
+    '<h1>' + student.firstName + '<h1><h3>DNI: ' + student.dni + '<h3>'
+
+  return li
+}
+
+//nombre
+document.getElementById('firstName').onblur = function (event) {
+  var firstNameNode = event.target
+
+  if (firstNameNode.value) {
+    firstNameNode.classList.remove('is-invalid')
+    firstNameNode.classList.add('is-valid')
+  } else {
+    firstNameNode.classList.remove('is-valid')
+    firstNameNode.classList.add('is-invalid')
+  }
+
+  validateButtonSimple()
+}
+
+//dni
+document.getElementById('dni').onblur = function (event) {
+  var dniNode = event.target
+
+  var value = dniNode.value
+
+  var parsedDni = parseInt(value, 10)
+
+  if (
+    parsedDni &&
+    !isNaN(parsedDni) &&
+    parsedDni >= 0 &&
+    searchIndexByDni(parsedDni) === -1
+  ) {
+    dniNode.classList.remove('is-invalid')
+    dniNode.classList.add('is-valid')
+  } else {
+    dniNode.classList.remove('is-valid')
+    dniNode.classList.add('is-invalid')
+  }
+
+  validateButtonSimple()
+}
+
+addStudentButton.onclick = function (event) {
+  var firstNameNode = document.getElementById('firstName')
+  var dniNode = document.getElementById('dni')
+  var parsedDni = parseInt(dniNode.value, 10)
+
+  addStudentSimple(firstNameNode.value, parsedDni)
+
+  firstNameNode.classList.remove('is-valid')
+  dniNode.classList.remove('is-valid')
+
+  firstNameNode.value = ''
+  dniNode.value = ''
+}
+
+function validateButtonSimple () {
+  var validFields = document.getElementsByClassName('is-valid')
+  if (validFields.length === 2) {
+    addStudentButton.disabled = false
+  } else {
+    addStudentButton.disabled = true
   }
 }
