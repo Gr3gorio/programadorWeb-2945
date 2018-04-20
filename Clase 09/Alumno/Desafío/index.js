@@ -104,7 +104,7 @@ edadInput.onblur = function (event) {
 function validateAllFields () {
   var submitButton = document.getElementById('submitButton')
   var validFields = document.getElementsByClassName('is-valid')
-  if (validFields && validFields.length === 3) {
+  if (validFields && validFields.length === 6) {
     submitButton.disabled = false
   } else {
     submitButton.disabled = true
