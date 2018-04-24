@@ -1,40 +1,27 @@
-var studentsList = ['CARLOS','GERONIMO','NICOLAS','LUCAS']
+var studentsList = [ 'CARLOS', 'GERONIMO', 'NICOLAS', 'LUCAS' ]
 
 var stringStudents = JSON.stringify(studentsList)
 
-localStorage.setItem('students', stringStudents)
-
-var localStudents = localStorage.getItem('students')
-
-var parsedStudnets = JSON.parse(localStudents)
-
-
+localStorage.setItem('studentsList', stringStudents)
 
 function addStudent (studentName) {
-var localStudents = localStorage.getItem('studentsList')
+  var saveStudents = localStorage.getItem('studentsList')
 
-var parsedStudentsList
+  var parsedStudentsList
 
-if (localStudents){
-    parsedStudentsList = JSON.parse(localStudents)
-}else{
-    parsedStudentsList=[]
-}
+  if (JSON.parse(saveStudents)) {
+    parsedStudentsList = JSON.parse(saveStudents)
+  } else {
+    parsedStudentsList = []
+  }
+
   var upperCaseName = studentName.toUpperCase()
 
   parsedStudentsList.push(upperCaseName)
-  var NewList = JSON.stringify(parsedStudnets)
-  localStorage.setItem('students', NewList)
+
+  var NewList = JSON.stringify(parsedStudentsList)
+
+  localStorage.setItem('studentsList', NewList)
 }
 
-addStudent('gregorio')
-
-
-
-
-
-
-
-
-
-
+addStudent('Gregorio')
