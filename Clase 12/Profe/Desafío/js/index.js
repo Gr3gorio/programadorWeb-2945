@@ -51,6 +51,7 @@ $('input[type="email"]').blur(function () {
   } else {
     inputNode.removeClass('is-valid')
     inputNode.addClass('is-invalid')
+
     var parentNode = inputNode.parent()
     parentNode.append('<span class="text-danger">' + errorText + '</span>')
   }
